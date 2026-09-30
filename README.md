@@ -1,17 +1,20 @@
 # Cybersecurity Practicals
 
-Hands-on cybersecurity learning journey — networking fundamentals through offensive/defensive security, web app security, and cloud security. Companion to my [AWS/Cloud Engineering portfolio](https://github.com/vershi1ma/aws-ec2-deployment-automation).
+Hands-on cybersecurity learning journey: networking fundamentals through cloud security, detection, and offensive essentials. Companion to my [Cloud & DevOps portfolio](https://github.com/vershi1ma/Cloud-DevOps).
 
 ## Overview
-Phase-by-phase practical work, documented in `docs/`, with real lab write-ups and debugging stories.
+Phase-by-phase practical work, run in a real AWS lab and documented in `docs/` with lab write-ups and the problems hit along the way.
 
 ## Phases
 - Phase 0: Networking & Systems Fundamentals *(in progress)*
-- Phase 1: Security Fundamentals & CIA Triad
-- Phase 2: Linux/Windows Hardening
-- Phase 3: Offensive Security Fundamentals
-- Phase 4: Practical Offense — Guided Labs
-- Phase 5: Web App Security (OWASP Top 10)
-- Phase 6: Defensive/Blue Team Detection & Monitoring
-- Phase 7: Cloud Security
-- Phase 8: Capstone
+- Phase 1: Security Fundamentals & Frameworks (CIA triad, MITRE ATT&CK, NIST CSF, CIS)
+- Phase 2: Hardening (Linux, SSH, firewalls, logs, patching)
+- Phase 3: Cloud Security (IAM, S3 exposure, GuardDuty, Security Hub, CloudTrail)
+- Phase 4: Detection & Incident Response
+- Phase 5: Offensive Essentials (own lab only)
+- Phase 6: Capstone
+
+Running alongside: DevSecOps scanning in CI pipelines and security automation scripts.
+
+## Detailed write-ups
+- [Phase 0: Watching a web request travel (DNS, TCP, HTTP vs HTTPS)](docs/00-networking-fundamentals/01-packet-capture-lab.md)
