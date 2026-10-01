@@ -4,7 +4,7 @@
 An evolving cybersecurity portfolio built alongside my cloud engineering work, aimed at cloud security and DevSecOps roles. Every phase is hands-on in a real AWS lab and documented with what was built and the real problems hit along the way. It grows one phase at a time, so the sections below only describe work that is finished. Companion to my [Cloud & DevOps portfolio](https://github.com/vershi1ma/Cloud-DevOps).
 
 ## Architecture
-The lab is an Amazon Linux 2023 EC2 instance inside an AWS VPC, reached only through Systems Manager Session Manager (IAM role-based, no open SSH port). Packets on its network interface are recorded with tcpdump and studied against real traffic: DNS lookups through the AWS VPC resolver (UDP 53), TCP connection setup, and plain HTTP compared with TLS-encrypted HTTPS. Later phases extend the same lab with hardening, cloud security services, and detection tooling.
+The lab is an Amazon Linux 2023 EC2 instance inside an AWS VPC, reached only through Systems Manager Session Manager (IAM role-based, no inbound SSH rule in the security group). Packets on its network interface are recorded with tcpdump and studied against real traffic: DNS lookups through the AWS VPC resolver (UDP 53), TCP connection setup, and plain HTTP compared with TLS-encrypted HTTPS. Later phases extend the same lab with hardening, cloud security services, and detection tooling.
 
 ## Skills demonstrated
 DNS (resolution, TTL, UDP port 53) · TCP vs UDP · TCP three-way handshake · HTTP vs HTTPS (TLS encryption, SNI leakage) · Packet capture and analysis (tcpdump, capture filters) · dig and curl · OSI model mapped to real traffic · AWS Systems Manager Session Manager · Linux command line
