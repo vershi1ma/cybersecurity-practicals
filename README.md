@@ -29,3 +29,5 @@ Running alongside: DevSecOps scanning in CI pipelines and security automation sc
   - [Patching Amazon Linux 2023: why "no updates" isn't the whole answer](docs/00-networking-fundamentals/05-patching-amazon-linux.md)
 
 Each write-up covers what was done and the real problems hit and fixed along the way.
+
+Full tool inventory, used so far and planned by phase: [TOOLS.md](TOOLS.md)
