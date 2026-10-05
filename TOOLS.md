@@ -29,8 +29,26 @@ The tools this portfolio uses, what each is for, and where it fits. **Used** mea
 | 5 Offensive essentials | OWASP Juice Shop, DVWA, Burp Suite, Gobuster, Nikto, `sqlmap` | Web attacks against deliberately vulnerable apps in my own lab, each with an exploit-then-fix write-up |
 | Running alongside | GitHub Actions, Trivy, Checkov / tfsec, secret scanning, Python and Bash | Security scanning in CI, automation scripts |
 
+## Practice platforms
+
+Where I practise between and around the labs, each mapped to the phase it supports. Platform tiers change, so I check current limits before relying on one.
+
+| Platform | Used for | Phase |
+|---|---|---|
+| OverTheWire (Bandit) | Linux and command-line drills over SSH | 0 to 2 |
+| TryHackMe | Guided rooms on networking, Linux, web and SOC work | 1, 4, 5 |
+| picoCTF | Beginner CTF challenges in the browser; weekly practice with published write-ups | 1 onwards |
+| PortSwigger Web Security Academy | Web application attacks with online labs | 5 |
+| CyberDefenders, LetsDefend, Blue Team Labs | Blue-team investigations and SOC practice | 4 |
+| Cisco Networking Academy | Networking and security essentials courses | 0 to 1 |
+| AWS Skill Builder | AWS security theory and courses | 3 |
+| CyberChef | Hashing, encoding and encryption by hand in the browser | 1 |
+| malware-traffic-analysis.net | Real packet captures for offline analysis with `tshark` | 4 |
+| Hack The Box | Harder machines, optional and later | 5 onwards |
+
 ## Safety rules
 
 - Scan and attack only my own lab or CTF platforms.
 - Vulnerable apps run only in an isolated lab VPC with inbound limited to my own IP.
 - The DoS lab runs only between two isolated instances I control, never against a public server or a shared service.
+- Public packet captures are opened read-only in `tshark`; no malware sample is ever executed.
