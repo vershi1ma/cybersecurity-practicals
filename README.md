@@ -7,18 +7,18 @@ An evolving cybersecurity portfolio built alongside my cloud engineering work, a
 The lab is an Amazon Linux 2023 EC2 instance inside an AWS VPC, reached only through Systems Manager Session Manager (IAM role-based, no inbound SSH rule in the security group). Packets on its network interface are recorded with tcpdump, read back with tshark, and studied against real traffic, including unsolicited internet scanners: DNS lookups through the AWS VPC resolver (UDP 53), TCP connection setup, and plain HTTP compared with TLS-encrypted HTTPS. The server is kept patched against Amazon Linux's dated release model, with a snapshot taken before each change. Later phases extend the same lab with hardening, cloud security services, and detection tooling.
 
 ## Skills demonstrated
-DNS (resolution, TTL, UDP port 53) · TCP vs UDP · TCP three-way handshake · HTTP vs HTTPS (TLS encryption, SNI leakage) · Packet capture and analysis (tcpdump, tshark display filters) · traffic attribution (reverse and forward-confirmed DNS) · dig and curl · OSI model mapped to real traffic · AWS Systems Manager Session Manager · Linux command line · nmap port scanning (filtered/open/closed) · HTTP header and method enumeration (curl -I, OPTIONS) · security findings write-up (version banner, TRACE/XST, missing security headers) · Linux user and permission management (sudo, groups, account lifecycle) · process and service inspection (ps, ss, systemctl, enabled-vs-default baseline) · log analysis (journalctl, Apache access logs) · Linux patching (dnf, Amazon Linux 2023 release model, snapshot-before-change, kernel reboot verification) · CIA triad and threat modeling (risk scoring, STRIDE) · MITRE ATT&CK technique mapping (T1595, T1190) · NIST CSF function mapping and gap analysis
+DNS (resolution, TTL, UDP port 53) · TCP vs UDP · TCP three-way handshake · HTTP vs HTTPS (TLS encryption, SNI leakage) · Packet capture and analysis (tcpdump, tshark display filters) · traffic attribution (reverse and forward-confirmed DNS) · dig and curl · OSI model mapped to real traffic · AWS Systems Manager Session Manager · Linux command line · nmap port scanning (filtered/open/closed) · HTTP header and method enumeration (curl -I, OPTIONS) · security findings write-up (version banner, TRACE/XST, missing security headers) · Linux user and permission management (sudo, groups, account lifecycle) · process and service inspection (ps, ss, systemctl, enabled-vs-default baseline) · log analysis (journalctl, Apache access logs) · Linux patching (dnf, Amazon Linux 2023 release model, snapshot-before-change, kernel reboot verification) · CIA triad and threat modeling (risk scoring, STRIDE) · MITRE ATT&CK technique mapping (T1595, T1190) · NIST CSF function mapping and gap analysis · DevSecOps pipeline security (gitleaks, Checkov, Trivy, accepted-risk register, container and Kubernetes hardening, scanners proven with a failing test pull request)
 
 ## Roadmap
 - Phase 0: Networking & Systems Fundamentals *(complete)*
-- Phase 1: Security Fundamentals & Frameworks (CIA triad, MITRE ATT&CK, NIST CSF, CIS) *(in progress)*
+- Phase 1: Security Fundamentals & Frameworks (CIA triad, MITRE ATT&CK, NIST CSF, CIS) *(complete)*
 - Phase 2: Hardening (Linux, SSH, firewalls, logs, patching)
 - Phase 3: Cloud Security (IAM, S3 exposure, GuardDuty, Security Hub, CloudTrail)
 - Phase 4: Detection & Incident Response
 - Phase 5: Offensive Essentials (own lab only)
 - Phase 6: Capstone
 
-Running alongside: DevSecOps scanning in CI pipelines and security automation scripts.
+Running alongside: DevSecOps scanning in CI pipelines (secret scan, Checkov and Trivy now blocking, see the Phase 1 write-up) and security automation scripts.
 
 ## Detailed write-ups
 - Phase 0 — Networking & Systems Fundamentals
@@ -30,6 +30,7 @@ Running alongside: DevSecOps scanning in CI pipelines and security automation sc
 
 - Phase 1 — Security Fundamentals & Frameworks
   - [Threat model: Cloudlearner-server (CIA, STRIDE, ATT&CK, NIST CSF)](docs/01-security-fundamentals/threat-model.md)
+  - [DevSecOps: scanning and hardening a real pipeline (gitleaks, Checkov, Trivy)](docs/01-security-fundamentals/pipeline-security.md)
 
 Each write-up covers what was done and the real problems hit and fixed along the way.
 
