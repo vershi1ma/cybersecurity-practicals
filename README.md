@@ -1,4 +1,4 @@
-# Cybersecurity Practicals
+# security 
 
 ## Overview
 An evolving cybersecurity portfolio built alongside my cloud engineering work, aimed at cloud security and DevSecOps roles. Every phase is hands-on in a real AWS lab and documented with what was built and the real problems hit along the way. It grows one phase at a time, so the sections below only describe work that is finished. Companion to my [Cloud & DevOps portfolio](https://github.com/vershi1ma/Cloud-DevOps).
